@@ -1,11 +1,12 @@
 ### Olá, me chamo Mateus 😉
 
- - Estou cursando Bacharel em Sistemas de Informação.
+  👨‍🎓Estou cursando Bacharel em Sistemas de Informação.
  
- - Trabalhei como Recenseador no IBGE, participando na pesquisa do Censo demografico em 2022.
+  👨🏼‍🔬Trabalhei como Recenseador no IBGE, participando na pesquisa do Censo demografico em 2022.
  
- - Atuo como Bolsista Laboratório de Extensão em Desenvolvimento de Soluções - Leds, usando as ferramentas **Figma** e **Quant-UX**.
- 
+  💻Atuo como Bolsista Laboratório de Extensão em Desenvolvimento de Soluções - Leds, usando as ferramentas **Figma** e **Quant-UX**.
+  
+  🌱Aprendendo **Java** e aprimorando minhas habilidades em **SQL**
 
 
 
