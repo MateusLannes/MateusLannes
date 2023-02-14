@@ -25,6 +25,13 @@ Here are some ideas to get you started:
 - ⚡ Fun fact:assad
 -->
 
+
+ <div>
+  <a href="https://github.com/MateusLannes">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=MateusLannes&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MateusLannes&layout=compact&langs_count=16&theme=dracula"/>
+</div>
+
 <div style="display: inline_block"><br>
   <img align="center" alt="Rafa-Csharp" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
   <img align="center" alt="Rafa-Csharp" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
