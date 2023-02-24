@@ -6,7 +6,7 @@
  
   💻Atuo como Bolsista no Laboratório de Extensão em Desenvolvimento de Soluções - Leds, usando as ferramentas **Figma** e **Quant-UX**.
   
-  🌱Aprendendo **Java** e aprimorando minhas habilidades em **SQL**
+  🌱Aprendendo **Java** e aprimorando minhas habilidades em **SQL**.
 
 
 
