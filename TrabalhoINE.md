@@ -6,11 +6,68 @@
 
 O problema abordado neste relatório é a previsão de inadimplência de clientes de cartões de crédito. O conjunto de dados escolhido para a análise é o "Default of Credit Card Clients Dataset" do UCI Machine Learning Repository. Este conjunto de dados contém informações sobre clientes de cartões de crédito em Taiwan e é utilizado para prever o risco de inadimplência com base em variáveis demográficas e comportamentais.
 
-**Descrição do Conjunto de Dados:**
-- **Fonte:** Taiwan Economic Journal
-- **Número de Instâncias:** 30.000
-- **Número de Atributos:** 24
-- **Variáveis Principais:** ID, LIMIT_BAL, SEX, EDUCATION, MARRIAGE, AGE, PAY_0 a PAY_6, BILL_AMT1 a BILL_AMT6, PAY_AMT1 a PAY_AMT6, default.payment.next.month
+### **Descrição do Conjunto de Dados:**      
+
+O dataset "Default of Credit Card Clients" do UCI Machine Learning Repository contém informações detalhadas sobre clientes de cartões de crédito em Taiwan, com o objetivo de prever o risco de inadimplência no próximo mês. Aqui estão as informações completas sobre este dataset:
+
+### Informações Gerais:
+- **Título**: Default of Credit Card Clients Dataset
+- **Fonte**: Taiwan Economic Journal
+- **Número de Instâncias (Registros)**: 30.000
+- **Número de Atributos (Colunas)**: 24
+
+### Descrição dos Atributos:
+1. **ID**: Identificador único do cliente.
+2. **LIMIT_BAL**: Valor do crédito concedido ao cliente (em dólares NT).
+3. **SEX**: Gênero do cliente:
+   - 1 = Masculino
+   - 2 = Feminino
+4. **EDUCATION**: Nível de escolaridade do cliente:
+   - 1 = Pós-graduação
+   - 2 = Graduação
+   - 3 = Ensino médio
+   - 4 = Outros
+   - 5 = Desconhecido
+   - 6 = Desconhecido
+5. **MARRIAGE**: Estado civil do cliente:
+   - 1 = Casado
+   - 2 = Solteiro
+   - 3 = Outros
+6. **AGE**: Idade do cliente (em anos).
+7. **PAY_0**: Histórico de pagamento em setembro de 2005:
+   - 0 = Pagamento dentro do prazo
+   - 1-9 = Atrasos de 1 a 9 meses
+8. **PAY_2**: Histórico de pagamento em agosto de 2005.
+9. **PAY_3**: Histórico de pagamento em julho de 2005.
+10. **PAY_4**: Histórico de pagamento em junho de 2005.
+11. **PAY_5**: Histórico de pagamento em maio de 2005.
+12. **PAY_6**: Histórico de pagamento em abril de 2005.
+13. **BILL_AMT1**: Valor da fatura em setembro de 2005.
+14. **BILL_AMT2**: Valor da fatura em agosto de 2005.
+15. **BILL_AMT3**: Valor da fatura em julho de 2005.
+16. **BILL_AMT4**: Valor da fatura em junho de 2005.
+17. **BILL_AMT5**: Valor da fatura em maio de 2005.
+18. **BILL_AMT6**: Valor da fatura em abril de 2005.
+19. **PAY_AMT1**: Valor pago em setembro de 2005.
+20. **PAY_AMT2**: Valor pago em agosto de 2005.
+21. **PAY_AMT3**: Valor pago em julho de 2005.
+22. **PAY_AMT4**: Valor pago em junho de 2005.
+23. **PAY_AMT5**: Valor pago em maio de 2005.
+24. **PAY_AMT6**: Valor pago em abril de 2005.
+25. **default.payment.next.month**: Indicador de inadimplência do próximo mês:
+    - 1 = Inadimplente
+    - 0 = Não inadimplente
+
+
+### Descrição:
+Este dataset é frequentemente utilizado para prever a inadimplência de clientes de cartões de crédito com base em uma variedade de atributos demográficos e financeiros. A variável-alvo é `default.payment.next.month`, que indica se o cliente será ou não inadimplente no mês seguinte.
+
+### Aplicações:
+Este dataset é amplamente usado em análises de risco de crédito e em modelos de aprendizado de máquina para prever a inadimplência. É um recurso valioso para estudos em finanças, ciência de dados e inteligência artificial.
+
+Este conjunto de dados pode ser utilizado para treinar modelos de classificação e análise preditiva, auxiliando instituições financeiras na gestão de risco e na tomada de decisões.
+
+
 
 ## Metodologia
 
