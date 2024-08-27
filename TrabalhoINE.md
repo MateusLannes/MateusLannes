@@ -111,7 +111,8 @@ print(df.describe())
 
 3. **Histogramas para Variáveis Contínuas:**
 
-   ![Histogramas para Variáveis Contínuas](#)  <!-- Inserir histogramas aqui -->
+    ![download](https://github.com/user-attachments/assets/f762e745-dba4-4b25-8c0f-659a1d94f156)
+
 
    ```python
    # Histogramas para variáveis contínuas
@@ -120,11 +121,32 @@ print(df.describe())
    plt.suptitle('Histogramas para Variáveis Contínuas')
    plt.show()
    ```
-   **Insight:** Os histogramas mostram a distribuição das variáveis contínuas, permitindo verificar se elas seguem uma distribuição normal ou apresentam assimetrias.
+   **Insight:**
+      ### 1. **Histograma da Idade (`AGE`)**
+      - **Distribuição:** A distribuição da idade é assimétrica à direita, com a maior concentração de clientes na faixa de 25 a 40 anos. Poucos clientes têm mais de 60 anos, e quase nenhum tem menos de 20 ou mais de 70 anos.
+      - **Insight:** A maioria dos clientes de cartão de crédito nesta amostra são adultos jovens a meia-idade. Isso pode indicar que as pessoas nessa faixa etária são mais propensas a utilizar crédito. Este grupo pode ser mais relevante para estratégias de marketing e gestão de risco de crédito.
+   
+   ### 2. **Histograma do Valor da Fatura de Setembro de 2005 (`BILL_AMT1`)**
+      - **Distribuição:** A distribuição é altamente concentrada em valores próximos de zero, com uma cauda longa à direita. Isso indica que a maioria das faturas tem valores baixos, mas há alguns casos de valores de fatura extremamente altos (até 1 milhão de dólares NT).
+      - **Insight:** Embora a maioria dos clientes mantenha saldos relativamente baixos em suas faturas, a existência de alguns valores muito altos pode indicar a presença de um pequeno grupo de clientes com grande capacidade de crédito ou grandes dívidas. Esses clientes podem representar tanto um grande potencial de lucro quanto um risco elevado de inadimplência.
+   
+   ### 3. **Histograma do Valor Pago em Setembro de 2005 (`PAY_AMT1`)**
+      - **Distribuição:** A maioria dos pagamentos feitos pelos clientes também está concentrada em valores muito baixos, com alguns casos isolados de pagamentos muito altos (acima de 200 mil dólares NT).
+      - **Insight:** A concentração de pagamentos baixos pode refletir a estratégia de pagamento mínima por parte dos clientes, onde muitos preferem pagar o valor mínimo devido, resultando em altas taxas de juros sobre o saldo restante. Os poucos pagamentos altos podem representar liquidações de dívidas substanciais ou clientes que preferem manter seus saldos baixos.
+   
+   ### **Considerações Finais:**
+   - **Desigualdade Financeira:** A presença de caudas longas à direita nos histogramas de `BILL_AMT1` e `PAY_AMT1` sugere uma desigualdade no comportamento financeiro dos clientes, com uma minoria exibindo saldos e pagamentos muito maiores do que a maioria.
+   - **Segmentação de Mercado:** A análise sugere que a segmentação dos clientes em diferentes faixas etárias e comportamentais pode ser útil para a personalização de ofertas e estratégias de mitigação de risco.
+   - **Risco e Potencial de Lucro:** Os poucos clientes com saldos e pagamentos muito elevados podem representar tanto um alto potencial de lucro quanto um risco de inadimplência, exigindo uma análise mais detalhada e um acompanhamento rigoroso.
 
-4. **Gráficos de Dispersão:**
 
-   ![Relação entre Idade e Fatura 1](#)  <!-- Inserir gráfico de dispersão entre AGE e BILL_AMT1 aqui -->
+
+
+
+5. **Gráficos de Dispersão:**
+
+     ![download](https://github.com/user-attachments/assets/81e562a9-805a-4afc-b61b-de0a54f62eb0)
+
 
    ```python
    # Gráficos de dispersão
@@ -133,7 +155,24 @@ print(df.describe())
    plt.title('Relação entre Idade e Fatura 1')
    plt.show()
    ```
-   **Insight:** O gráfico de dispersão revela a relação entre idade e fatura. Padrões ou agrupamentos podem indicar como a inadimplência varia com essas variáveis.
+   **Insight:**
+      1. **Distribuição Etária e Valores de Fatura**
+         - **Concentração Etária:** A maior parte dos clientes tem entre 25 e 60 anos, com uma leve concentração entre 30 e 50 anos. Este é o grupo que parece ser o mais ativo em termos de uso de crédito.
+      
+      2. **Inadimplência em Relação à Idade**
+         - **Distribuição de Inadimplentes:** Clientes inadimplentes estão presentes em todas as faixas etárias, mas não há uma concentração muito alta em faixas etárias específicas. Isso sugere que a idade por si só não é um fator isolado determinante para inadimplência.
+      
+      3. **Inadimplência em Relação ao Valor da Fatura**
+         - **Altos Valores de Fatura:** Acima de 500 mil dólares NT, a quantidade de inadimplentes diminui. Isso pode indicar que clientes com faturas mais altas estão mais bem posicionados financeiramente ou que têm acesso a recursos que evitam a inadimplência.
+      
+      4. **Padrões Gerais de Inadimplência**
+         - **Ausência de Padrões Claros:** A ausência de uma tendência clara entre idade, valor da fatura e inadimplência sugere que o comportamento de inadimplência é complexo e possivelmente influenciado por uma combinação de fatores demográficos e comportamentais (como histórico de pagamento, renda, nível educacional, etc.).
+
+
+
+
+
+
 
 ### Análise Preditiva
 
@@ -166,17 +205,26 @@ models = {
 
 1. **Logistic Regression:**
 
-   **Acurácia:** X.XX
+   **Acurácia:** 0.81
 
    **Relatório de Classificação:**
 
    ```plaintext
-   [Inserir relatório de classificação aqui]
+   Acurácia (Logistic Regression): 0.81
+              precision    recall  f1-score   support
+
+           0       0.82      0.97      0.89      4687
+           1       0.70      0.24      0.36      1313
+
+    accuracy                           0.81      6000
+   macro avg       0.76      0.61      0.62      6000
+   weighted avg       0.79      0.81      0.77      6000
    ```
 
    **Matriz de Confusão:**
 
-   ![Matriz de Confusão (Logistic Regression)](#)  <!-- Inserir matriz de confusão para Logistic Regression aqui -->
+   ![download](https://github.com/user-attachments/assets/79f614ba-bd20-4609-82c3-b3eef8cf59a9)
+  
 
    ```python
    # Matriz de Confusão
@@ -189,9 +237,27 @@ models = {
    plt.show()
    ```
 
-   **Insight:** A Regressão Logística mostra boa capacidade de distinguir entre classes, mas pode ter dificuldades com a classe minoritária.
+   **Insight:**
+      1. **Dados**
+         - **Verdadeiro Negativo (TN = 4551):** O modelo classificou corretamente 4551 clientes como não inadimplentes.
+         - **Falso Positivo (FP = 136):** 136 clientes foram incorretamente classificados como inadimplentes quando não eram.
+         - **Falso Negativo (FN = 997):** 997 clientes que realmente eram inadimplentes foram classificados incorretamente como não inadimplentes.
+         - **Verdadeiro Positivo (TP = 316):** O modelo classificou corretamente 316 clientes como inadimplentes.
+      
+      2. **Métricas de Desempenho:**
+         - **Acurácia:** O modelo tem uma acurácia de 81%, o que indica que 81% das previsões feitas pelo modelo estavam corretas. 
+         - **Precisão (Classe 1 = Inadimplente):** A precisão para a classe inadimplente é de 70%, o que significa que, das previsões feitas para a classe 1 (inadimplente), 70% estavam corretas.
+         - **Recall (Classe 1 = Inadimplente):** O recall é relativamente baixo para a classe 1, com um valor de 24%, indicando que o modelo conseguiu identificar corretamente apenas 24% dos inadimplentes reais.
+         - **F1-Score (Classe 1 = Inadimplente):** O F1-score para a classe 1 é de 0.36, sugerindo um equilíbrio moderado entre precisão e recall, mas é mais inclinado a penalizar o baixo recall.
+      
+      3. **Análise dos Resultados:**
+         - **Desempenho no Identificação de Inadimplentes:** O modelo é bom em identificar clientes que não são inadimplentes (alta precisão e recall para a classe 0), mas tem um desempenho limitado em identificar corretamente os inadimplentes (classe 1), conforme evidenciado pelo recall baixo de 24%.
+         - **Implicações do Falso Negativo:** O alto número de falsos negativos (997) é preocupante, pois implica que o modelo frequentemente deixa de identificar clientes que realmente são inadimplentes, o que pode levar a um subestimar do risco de crédito.
+         - **Trade-off entre Precisão e Recall:** O modelo parece ter uma ligeira tendência a classificar os clientes como não inadimplentes, o que poderia ser um reflexo da distribuição desbalanceada das classes, onde a maioria dos clientes é não inadimplente.
 
-2. **Random Forest:**
+
+   
+3. **Random Forest:**
 
    **Acurácia:** X.XX
 
@@ -203,7 +269,7 @@ models = {
 
    **Matriz de Confusão:**
 
-   ![Matriz de Confusão (Random Forest)](#)  <!-- Inserir matriz de confusão para Random Forest aqui -->
+    ![download](https://github.com/user-attachments/assets/bd4bd901-a804-408e-9c44-12f7ea49975a)
 
    ```python
    # Matriz de Confusão
@@ -216,7 +282,17 @@ models = {
    plt.show()
    ```
 
-   **Insight:** O Random Forest pode capturar melhor as complexidades dos dados e lidar melhor com a desbalanceamento de classes.
+   **Insight:** 
+    - O modelo tem uma acurácia de 82%, indicando que a maioria das previsões está correta.
+   
+      - Desempenho Desbalanceado: O recall para a classe de inadimplentes (1) é relativamente baixo (0.64), sugerindo que o modelo tem dificuldade em identificar todos os clientes inadimplentes.
+   
+      - Falsos Negativos: Há um número significativo de falsos negativos (346), o que pode ser preocupante, pois esses clientes inadimplentes não foram identificados corretamente.
+   
+      - Falsos Positivos: O número de falsos positivos (280) é menor, mas ainda relevante, indicando que alguns clientes não inadimplentes foram incorretamente classificados como inadimplentes.
+
+
+Falsos Positivos: O número de falsos positivos (280) é menor, mas ainda relevante, indicando que alguns clientes não inadimplentes foram incorretamente classificados como inadimplentes.
 
 ## Discussão
 
