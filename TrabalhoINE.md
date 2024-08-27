@@ -267,15 +267,14 @@ models = {
    **Relatório de Classificação:**
 
    ```plaintext
-   Acurácia (Logistic Regression): 0.81
-              precision    recall  f1-score   support
 
+              precision    recall  f1-score   support
            0       0.82      0.97      0.89      4687
            1       0.70      0.24      0.36      1313
-
+   
     accuracy                           0.81      6000
    macro avg       0.76      0.61      0.62      6000
-   weighted avg       0.79      0.81      0.77      6000
+   weighted avg    0.79      0.81      0.77      6000
    ```
 
    **Matriz de Confusão:**
@@ -316,12 +315,19 @@ models = {
    
 3. **Random Forest:**
 
-   **Acurácia:** X.XX
+   **Acurácia:** 0.81
 
    **Relatório de Classificação:**
 
    ```plaintext
-   [Inserir relatório de classificação aqui]
+              precision    recall  f1-score   support
+
+           0       0.84      0.94      0.89      4687
+           1       0.63      0.36      0.46      1313
+
+    accuracy                           0.81      6000
+   macro avg       0.73      0.65      0.67      6000
+   weighted avg    0.79      0.81      0.79      6000
    ```
 
    **Matriz de Confusão:**
