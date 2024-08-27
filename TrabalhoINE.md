@@ -51,7 +51,8 @@ print(df.describe())
 
 1. **Distribuição da Variável-Alvo:**
 
-   ![Distribuição de Default](#)  <!-- Inserir gráfico da distribuição da variável-alvo aqui -->
+  ![download](https://github.com/user-attachments/assets/5cec6d9c-6736-44e9-be03-d11c01ce581e)
+
 
    ```python
    # Distribuição da variável alvo
@@ -60,11 +61,24 @@ print(df.describe())
    plt.title('Distribuição de Default')
    plt.show()
    ```
-   **Insight:** A distribuição mostra o desbalanceamento entre as classes de inadimplência e não inadimplência. A classe de inadimplência pode ser menos frequente, o que pode afetar a performance dos modelos.
+#### Insights:
+   1. **Distribuição Desbalanceada**: 
+      - O gráfico mostra que a maioria dos clientes não são inadimplentes (`0`), com mais de 20.000 instâncias. Em contraste, há um número significativamente menor de inadimplentes (`1`), com cerca de 5.000 instâncias.
+      - Esse desbalanceamento indica que a classe dos não inadimplentes é majoritária, o que pode influenciar o desempenho dos modelos preditivos, especialmente em termos de acurácia e outras métricas, já que o modelo pode se inclinar a prever a classe majoritária.
+   
+   2. **Implicações para o Modelo**:
+      - **Necessidade de Técnicas de Balanceamento**: O desbalanceamento pode exigir técnicas como oversampling da classe minoritária ou undersampling da classe majoritária para evitar que o modelo aprenda a favorecer a classe dos não inadimplentes.
+      - **Impacto nas Métricas de Avaliação**: Ao avaliar o modelo, será importante considerar métricas como F1-score, recall, ou a matriz de confusão, que podem fornecer uma visão mais clara do desempenho nas classes desbalanceadas, em vez de se basear apenas na acurácia.
+   3. **Conclusões**:
+   
+      - **Risco de Inadimplência**: A baixa proporção de inadimplentes sugere que a maioria dos clientes gerencia bem seus pagamentos de cartão de crédito. Isso pode ser indicativo de critérios de concessão de crédito mais rigorosos ou de um comportamento financeiro mais responsável na base de clientes analisada.
+      - **Modelo de Negócio**: Empresas que utilizam esse tipo de análise podem explorar modelos de risco mais refinados, focando especialmente em características que diferenciam os inadimplentes dos não inadimplentes, o que pode ajudar em estratégias de crédito personalizadas.
+
 
 2. **Boxplots para Variáveis Contínuas:**
 
-   ![Boxplots para Variáveis Contínuas](#)  <!-- Inserir boxplots aqui -->
+   
+   ![download](https://github.com/user-attachments/assets/170f630b-851e-495f-9962-f6b7502d842b)
 
    ```python
    # Boxplots para variáveis contínuas
@@ -73,7 +87,27 @@ print(df.describe())
    plt.title('Boxplots para Variáveis Contínuas')
    plt.show()
    ```
-   **Insight:** Os boxplots ajudam a identificar outliers em variáveis como idade e valores de fatura. Outliers podem influenciar significativamente os resultados dos modelos e devem ser analisados com cuidado.
+   **Insight:** 
+
+
+   #### Padrões Observados:
+   1. **Variável `AGE`**:
+      - A variável `AGE` apresenta uma distribuição bastante concentrada, com uma faixa estreita de valores e poucos outliers. Isso sugere que a maioria dos clientes está dentro de uma faixa etária específica, sem grandes variações extremas. Essa concentração pode indicar um perfil demográfico específico para os clientes analisados.
+   
+   2. **Variável `BILL_AMT1`**:
+      - A variável `BILL_AMT1`, que representa o valor da primeira fatura de cada cliente, exibe uma distribuição mais dispersa, com uma mediana relativamente alta. Há muitos outliers significativos, indicando que alguns clientes possuem faturas excepcionalmente altas. Esses outliers podem ser importantes para identificar clientes com alto risco ou comportamento financeiro atípico.
+   
+   3. **Variável `PAY_AMT1`**:
+      - A variável `PAY_AMT1`, que representa o valor do pagamento da primeira fatura, também mostra uma distribuição com muitos outliers. No entanto, os valores centrais são significativamente mais baixos do que `BILL_AMT1`, o que pode sugerir que alguns clientes pagam apenas uma parte da dívida ou valores menores do que os totais de suas faturas.
+   
+   #### Insights:
+   - **Perfil Demográfico e Financeiro**: A concentração da variável `AGE` sugere que a instituição financeira pode ter um perfil de cliente-alvo bem definido em termos de idade. Já as variações extremas em `BILL_AMT1` e `PAY_AMT1` indicam que, embora alguns clientes tenham grandes faturas, os valores pagos podem não ser suficientes para cobrir essas dívidas, o que é um sinal potencial de inadimplência.
+   
+   - **Risco de Inadimplência**: A discrepância entre os valores de `BILL_AMT1` e `PAY_AMT1` pode ser um indicativo de clientes que estão lutando para manter seus pagamentos em dia. Esses padrões podem ser úteis para refinar os modelos preditivos de inadimplência, focando em clientes que apresentam altos valores de fatura em relação ao que pagam.
+   
+   - **Atenção aos Outliers**: Os outliers identificados nas variáveis `BILL_AMT1` e `PAY_AMT1` merecem uma análise mais detalhada, pois podem representar comportamentos financeiros fora do comum, que podem distorcer as previsões se não forem tratados adequadamente.
+
+
 
 3. **Histogramas para Variáveis Contínuas:**
 
