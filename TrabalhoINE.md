@@ -135,7 +135,7 @@ print(df.describe())
 2. **Boxplots para Variáveis Contínuas:**
 
    
-   ![download](https://github.com/user-attachments/assets/170f630b-851e-495f-9962-f6b7502d842b)
+   ![Boxplots para Variáveis Contínuas](https://github.com/user-attachments/assets/170f630b-851e-495f-9962-f6b7502d842b)
 
    ```python
    # Boxplots para variáveis contínuas
@@ -168,7 +168,7 @@ print(df.describe())
 
 3. **Histogramas para Variáveis Contínuas:**
 
-    ![download](https://github.com/user-attachments/assets/f762e745-dba4-4b25-8c0f-659a1d94f156)
+    ![Histogramas para Variáveis Contínuas](https://github.com/user-attachments/assets/f762e745-dba4-4b25-8c0f-659a1d94f156)
 
 
    ```python
@@ -202,7 +202,7 @@ print(df.describe())
 
 5. **Gráficos de Dispersão:**
 
-     ![download](https://github.com/user-attachments/assets/81e562a9-805a-4afc-b61b-de0a54f62eb0)
+     ![Gráficos de Dispersão](https://github.com/user-attachments/assets/81e562a9-805a-4afc-b61b-de0a54f62eb0)
 
 
    ```python
@@ -279,7 +279,7 @@ models = {
 
    **Matriz de Confusão:**
 
-   ![download](https://github.com/user-attachments/assets/79f614ba-bd20-4609-82c3-b3eef8cf59a9)
+   ![Matriz de Confusão](https://github.com/user-attachments/assets/79f614ba-bd20-4609-82c3-b3eef8cf59a9)
   
 
    ```python
@@ -332,7 +332,7 @@ models = {
 
    **Matriz de Confusão:**
 
-    ![download](https://github.com/user-attachments/assets/bd4bd901-a804-408e-9c44-12f7ea49975a)
+    ![Random Forest](https://github.com/user-attachments/assets/bd4bd901-a804-408e-9c44-12f7ea49975a)
 
    ```python
    # Matriz de Confusão
