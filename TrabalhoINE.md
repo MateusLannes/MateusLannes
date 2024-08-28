@@ -489,15 +489,7 @@ for model_name, model in models.items():
     plt.xlabel('Previsto')
     plt.show()
 
-# Discussão das limitações
-print("\nDiscussão das limitações:")
-print("1. A acurácia pode não refletir a verdadeira performance dos modelos devido ao desbalanceamento da variável-alvo.")
-print("2. A Regressão Logística pode não capturar todas as complexidades dos dados.")
-print("3. O Random Forest, apesar de robusto, pode ser difícil de interpretar.")
 
-print("\nPossíveis Melhorias:")
-print("1. Aplicar técnicas de balanceamento de dados, como oversampling ou undersampling.")
-print("2. Explorar outras técnicas de modelagem, como Gradient Boosting.")
 ```
 
 ---
