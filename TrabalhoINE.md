@@ -10,7 +10,7 @@ O problema abordado neste relatório é a previsão de inadimplência de cliente
 
 ### **Descrição do Conjunto de Dados:**      
 
-O dataset "Default of Credit Card Clients" do UCI Machine Learning Repository contém informações detalhadas sobre clientes de cartões de crédito em Taiwan, com o objetivo de prever o risco de inadimplência no próximo mês. Aqui estão as informações completas sobre este dataset:
+O dataset: "Default of Credit Card Clients" do  Machine Learning Repository UCI contém informações detalhadas sobre clientes de cartões de crédito em Taiwan, com o objetivo de prever o risco de inadimplência no próximo mês. Aqui estão as informações completas sobre este dataset:
 
 ### Informações Gerais:
 - **Título**: Default of Credit Card Clients Dataset
@@ -24,7 +24,7 @@ O dataset "Default of Credit Card Clients" do UCI Machine Learning Repository co
 3. **SEX**: Gênero do cliente:
    - 1 = Masculino
    - 2 = Feminino
-4. **EDUCATION**: Nível de escolaridade do cliente:
+4. **EDUCATION**: Grau de escolaridade do cliente:
    - 1 = Pós-graduação
    - 2 = Graduação
    - 3 = Ensino médio
@@ -67,7 +67,7 @@ Este dataset é frequentemente utilizado para prever a inadimplência de cliente
 ### Aplicações:
 Este dataset é amplamente usado em análises de risco de crédito e em modelos de aprendizado de máquina para prever a inadimplência. É um recurso valioso para estudos em finanças, ciência de dados e inteligência artificial.
 
-Este conjunto de dados pode ser utilizado para treinar modelos de classificação e análise preditiva, auxiliando instituições financeiras na gestão de risco e na tomada de decisões.
+Esse conjunto de dados poderá ser usado a fim de treinar modelos de classificação e análise preditiva, auxiliando instituições financeiras na gestão de risco e na tomada de decisões.
 
 
 
@@ -115,8 +115,8 @@ print(df.describe())
 
    ```python
    # Distribuição da variável alvo
-   plt.figure(figsize=(6, 4))
-   sns.countplot(x='default payment next month', data=df)
+   plt.figure(figsize = (6, 4))
+   sns.countplot(x ='default payment next month', data = df)
    plt.title('Distribuição de Default')
    plt.show()
    ```
@@ -126,7 +126,7 @@ print(df.describe())
       - Esse desbalanceamento indica que a classe dos não inadimplentes é majoritária, o que pode influenciar o desempenho dos modelos preditivos, especialmente em termos de acurácia e outras métricas, já que o modelo pode se inclinar a prever a classe majoritária.
    
    2. **Implicações para o Modelo**:
-      - **Necessidade de Técnicas de Balanceamento**: O desbalanceamento pode exigir técnicas como oversampling da classe minoritária ou undersampling da classe majoritária para evitar que o modelo aprenda a favorecer a classe dos não inadimplentes.
+      - **Necessidade de Técnicas de Balanceamento**: O desbalanceamento pode exigir técnicas como o aumento da classe minoritária (oversampling) ou a redução da classe majoritária (undersampling) evitar que o modelo se incline a favorecer a classe dos clientes que não estão inadimplentes.
       - **Impacto nas Métricas de Avaliação**: Ao avaliar o modelo, será importante considerar métricas como F1-score, recall, ou a matriz de confusão, que podem fornecer uma visão mais clara do desempenho nas classes desbalanceadas, em vez de se basear apenas na acurácia.
    3. **Conclusões**:
    
@@ -183,7 +183,7 @@ print(df.describe())
    **Insight:**
       ### 1. **Histograma da Idade (`AGE`)**
       - **Distribuição:** A distribuição da idade é assimétrica à direita, com a maior concentração de clientes na faixa de 25 a 40 anos. Poucos clientes têm mais de 60 anos, e quase nenhum tem menos de 20 ou mais de 70 anos.
-      - **Insight:** A maioria dos clientes de cartão de crédito nesta amostra são adultos jovens a meia-idade. Isso pode indicar que as pessoas nessa faixa etária são mais propensas a utilizar crédito. Este grupo pode ser mais relevante para estratégias de marketing e gestão de risco de crédito.
+      - **Insight:** A majoritaria parte dos clientes de cartão de crédito nesta amostra são adultos jovens a meia-idade. Isso pode indicar que as pessoas nessa faixa etária são mais propensas a utilizar crédito. Este grupo pode ser mais relevante para estratégias de marketing e gestão de risco de crédito.
    
    ### 2. **Histograma do Valor da Fatura de Setembro de 2005 (`BILL_AMT1`)**
       - **Distribuição:** A distribuição é altamente concentrada em valores próximos de zero, com uma cauda longa à direita. Isso indica que a maioria das faturas tem valores baixos, mas há alguns casos de valores de fatura extremamente altos (até 1 milhão de dólares NT).
@@ -219,7 +219,7 @@ print(df.describe())
          - **Concentração Etária:** A maior parte dos clientes tem entre 25 e 60 anos, com uma leve concentração entre 30 e 50 anos. Este é o grupo que parece ser o mais ativo em termos de uso de crédito.
       
       2. **Inadimplência em Relação à Idade**
-         - **Distribuição de Inadimplentes:** Clientes inadimplentes estão presentes em todas as faixas etárias, mas não há uma concentração muito alta em faixas etárias específicas. Isso sugere que a idade por si só não é um fator isolado determinante para inadimplência.
+         - **Distribuição de Inadimplentes:** Clientes inadimplentes estão presentes em todas as faixas etárias, mas não há uma concentração muito alta em faixas etárias específicas. Isso sugere que a idade como fator isolado  não é determinante para inadimplência.
       
       3. **Inadimplência em Relação ao Valor da Fatura**
          - **Altos Valores de Fatura:** Acima de 500 mil dólares NT, a quantidade de inadimplentes diminui. Isso pode indicar que clientes com faturas mais altas estão mais bem posicionados financeiramente ou que têm acesso a recursos que evitam a inadimplência.
@@ -237,10 +237,10 @@ print(df.describe())
 
 #### Divisão dos Dados
 
-Os dados foram divididos em conjuntos de treinamento e teste para avaliar a capacidade dos modelos de generalizar para novos dados.
+O conjunto de dados foi separado em diferentes conjuntos de treinamento e outros de teste para medir a capacidade desses modelos de generalizar para dados novos.
 
 ```python
-# Dividir os dados em treinamento e teste
+# Dividir os conjunto de dados em  dados de treinamento e outro de teste
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 ```
 
@@ -254,7 +254,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 ```python
 # Modelos a serem testados
-models = {
+models={
     'Logistic Regression': LogisticRegression(max_iter=1000),
     'Random Forest': RandomForestClassifier()
 }
@@ -270,13 +270,14 @@ models = {
 
    ```plaintext
 
-              precision    recall  f1-score   support
-           0       0.82      0.97      0.89      4687
-           1       0.70      0.24      0.36      1313
+               Precisão    Revocação    F1-Score   Suporte
+           0       0,82      0,97      0,89      4687
+           1       0,70      0,24      0,36      1313
    
-    accuracy                           0.81      6000
-   macro avg       0.76      0.61      0.62      6000
-   weighted avg    0.79      0.81      0.77      6000
+   Acurácia                             0,81     6000
+   Média macro       0,76      0,61     0,62     6000
+   Média ponderada   0,79      0,81     0,77     6000
+
    ```
 
    **Matriz de Confusão:**
@@ -287,12 +288,21 @@ models = {
    ```python
    # Matriz de Confusão
    cm = confusion_matrix(y_test, y_pred)
+   
+   # Configurar o tamanho da figura
    plt.figure(figsize=(8, 6))
+   
+   # Criar o heatmap da matriz de confusão
    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", cbar=False)
+   
+   # Adicionar título e rótulos aos eixos
    plt.title(f'Matriz de Confusão (Logistic Regression)')
-   plt.ylabel('Verdadeiro')
-   plt.xlabel('Previsto')
+   plt.ylabel('Verdadeiro ')
+   plt.xlabel('Previsto ')
+   
+   # Exibir o gráfico
    plt.show()
+   
    ```
 
    **Insight:**
@@ -322,14 +332,15 @@ models = {
    **Relatório de Classificação:**
 
    ```plaintext
-              precision    recall  f1-score   support
+               Precisão   Revocação   F1-Score   Suporte
 
-           0       0.84      0.94      0.89      4687
-           1       0.63      0.36      0.46      1313
+           0       0,84      0,94      0,89      4687
+           1       0,63      0,36      0,46      1313
 
-    accuracy                           0.81      6000
-   macro avg       0.73      0.65      0.67      6000
-   weighted avg    0.79      0.81      0.79      6000
+    Acurácia                           0,81      6000
+   Média macro       0,73      0,65    0,67      6000
+   Média ponderada   0,79      0,81    0,79      6000
+
    ```
 
    **Matriz de Confusão:**
@@ -339,11 +350,19 @@ models = {
    ```python
    # Matriz de Confusão
    cm = confusion_matrix(y_test, y_pred)
+   
+   # Configurar o tamanho da figura
    plt.figure(figsize=(8, 6))
+   
+   # Criar o heatmap da matriz de confusão
    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", cbar=False)
+   
+   # Adicionar título e rótulos aos eixos
    plt.title(f'Matriz de Confusão (Random Forest)')
-   plt.ylabel('Verdadeiro')
-   plt.xlabel('Previsto')
+   plt.ylabel('Verdadeiro ')
+   plt.xlabel('Previsto ')
+   
+   # Exibir o gráfico
    plt.show()
    ```
 
@@ -417,7 +436,7 @@ if 'ID' in df.columns:
 
 # Codificar variáveis categóricas
 categorical_features = ['SEX', 'EDUCATION', 'MARRIAGE']
-df = pd.get_dummies(df, columns=categorical_features, drop_first=True)
+df = pd.get_dummies(df,columns=categorical_features, drop_first=True)
 
 # Separando características e variável alvo
 target_column = 'default payment next month'
@@ -456,7 +475,6 @@ plt.show()
 
 # Análise Preditiva
 
-# Dividir os dados em treinamento e teste
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Normalização dos dados
@@ -483,14 +501,21 @@ for model_name, model in models.items():
     print(classification_report(y_test, y_pred))
 
     # Matriz de Confusão
-    cm = confusion_matrix(y_test, y_pred)
-    plt.figure(figsize=(8, 6))
-    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", cbar=False)
-    plt.title(f'Matriz de Confusão ({model_name})')
-    plt.ylabel('Verdadeiro')
-    plt.xlabel('Previsto')
-    plt.show()
-
+   cm = confusion_matrix(y_test, y_pred)
+         
+   # Configurar o tamanho da figura
+   plt.figure(figsize=(8, 6))
+         
+   # Criar o heatmap da matriz de confusão
+   sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", cbar=False)
+         
+   # Adicionar título e rótulos aos eixos
+   plt.title(f'Matriz de Confusão ({model_name})')
+   plt.ylabel('Verdadeiro ')
+   plt.xlabel('Previsto ')
+         
+   # Exibir o gráfico
+   plt.show()
 
 ```
 
