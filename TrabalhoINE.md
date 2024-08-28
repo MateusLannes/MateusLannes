@@ -108,7 +108,7 @@ print(df.describe())
 
 1. **Distribuição da Variável-Alvo:**
 
-  ![download](https://github.com/user-attachments/assets/5cec6d9c-6736-44e9-be03-d11c01ce581e)
+  ![Distribuição da Variável-Alvo](https://github.com/user-attachments/assets/5cec6d9c-6736-44e9-be03-d11c01ce581e)
 
 
    ```python
