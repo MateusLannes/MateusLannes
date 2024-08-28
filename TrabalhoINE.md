@@ -2,7 +2,7 @@
 
 
 # Relatório de Análise do Conjunto de Dados de Inadimplência de Cartões de Crédito
-   ### **Autores:** Maressa Karen e Mateus Lannes
+  ## **Autores:** Maressa Karen e Mateus Lannes
 
 ## Introdução
 
