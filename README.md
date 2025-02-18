@@ -1,15 +1,5 @@
 ### Olá, me chamo Mateus 😉
 
-  👨‍🎓Estou cursando Bacharel em Sistemas de Informação.
- 
-  👨🏼‍🔬Trabalhei como Recenseador no IBGE, participando na pesquisa do Censo demográfico em 2022.
- 
-  💻Atuo como Bolsista no Laboratório de Extensão em Desenvolvimento de Soluções - Leds, usando as ferramentas **Figma** e **Quant-UX**.
-  
-  🌱Aprendendo **Java**, **docker**, **git** e aprimorando minhas habilidades em **SQL**.
-
-
-
 <!--
 **MateusLannes/MateusLannes** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
