@@ -2,11 +2,12 @@ name: keep-render-awake
 
 on:
   schedule:
-    - cron: "*/1 * * * *"
+     - cron: "*/1 * * * *"
+  workflow_dispatch:        # permite rodar manualmente
 
 jobs:
-  ping:
+  ping:  
     runs-on: ubuntu-latest
     steps:
-      - name: Curl Render
-        run: curl -s https://importacao-conecta-backend.onrender.com/health
+      - name: Ping Render health check
+        run: curl -s https://importacao-conecta-backend.onrender.com/health > /dev/null
